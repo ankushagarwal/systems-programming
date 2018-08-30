@@ -65,6 +65,6 @@ Vagrant.configure("2") do |config|
   # documentation for more information about their specific syntax and use.
   config.vm.provision "shell", inline: <<-SHELL
     apt-get update
-    apt-get install -y build-essential libcap-dev
+    apt-get install -y build-essential libcap-dev libseccomp-dev
   SHELL
 end
