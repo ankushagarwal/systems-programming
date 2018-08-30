@@ -9,6 +9,11 @@
 
 !Vagrantfile
 !Makefile
+!README
+!BUILDING
+!CHANGES
+!DISCLAIMER
+
 # Prerequisites
 *.d
 
