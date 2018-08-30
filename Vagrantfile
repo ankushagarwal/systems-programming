@@ -66,5 +66,6 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", inline: <<-SHELL
     apt-get update
     apt-get install -y build-essential libcap-dev libseccomp-dev apt-file libbsd-dev libbsd0 libacl1-dev
+    apt-file update
   SHELL
 end
