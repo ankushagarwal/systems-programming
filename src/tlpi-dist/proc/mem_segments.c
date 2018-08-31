@@ -43,9 +43,9 @@ doCalc(int val)                 /* Allocated in frame for doCalc() */
         printf("The cube of %d is %d\n", val, t);
     }
 }
+extern char etext, edata, end;
 
-int
-main(int argc, char *argv[])    /* Allocated in frame for main() */
+int main(int argc, char *argv[])    /* Allocated in frame for main() */
 {
     static int key = 9973;      /* Initialized data segment */
     static char mbuf[10240000]; /* Uninitialized data segment */
@@ -54,6 +54,8 @@ main(int argc, char *argv[])    /* Allocated in frame for main() */
     p = malloc(1024);           /* Points to memory in heap segment */
 
     doCalc(key);
-
+    printf("%p\n", &etext);
+    printf("%p\n", &edata);
+    printf("%p\n", &end);
     exit(EXIT_SUCCESS);
 }
