@@ -71,7 +71,9 @@ Vagrant.configure("2") do |config|
       apt-file \
       libbsd-dev \
       libbsd0 \
-      libacl1-dev
+      libacl1-dev \
+      cmake \
+      tree
     apt-file update
     apt-get upgrade
   SHELL
